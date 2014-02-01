@@ -35,11 +35,11 @@
       "type": "virtualbox-iso",
       "boot_wait": "10s",
       "disk_size": 4000,
-      "guest_os_type": "Debian_64",
+      "guest_os_type": "Debian",
       "http_directory": "http",
-      "iso_checksum": "72473e8a5e65b61acc7efde90d9f71d1",
+      "iso_checksum": "04c58f30744e64a0459caf7d7cace479",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/debian-cd/7.3.0/amd64/iso-cd/debian-7.3.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.3.0/i386/iso-cd/debian-7.3.0-i386-netinst.iso",
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_password": "{{ user `ssh_password` }}",
       "ssh_port": 22,
@@ -47,7 +47,7 @@
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "packer-debian-wheezy-x64",
+      "vm_name": "packer-debian-wheezy-i386",
       "boot_command": [
         "<esc><wait>",
         "install <wait>",
@@ -84,7 +84,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../builds/{{.Provider}}/debian-wheezy-amd64.box"
+      "output": "../builds/{{.Provider}}/debian-wheezy-i386.box"
     }
   ]
 }
