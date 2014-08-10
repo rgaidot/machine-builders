@@ -1,3 +1,4 @@
 #!/bin/bash -eux
 
-su vagrant -c 'curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash'
+su vagrant -c 'curl -L http://install.ohmyz.sh | sh'
+sudo chsh vagrant -s $(which zsh)

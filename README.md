@@ -4,12 +4,16 @@ A simple project that encapsulates [Packer](http://packer.io) templates for buil
 
 ## Prerequisites
 
-You need to have [Virtualbox](https://www.virtualbox.org), [Vagrant](http://vagrantup.com) and [Packer](http://packer.io)
+You need: 
+
+ - [Vagrant](http://vagrantup.com)
+ - [Packer](http://packer.io)
+ - [Virtualbox](https://www.virtualbox.org)
+
 
 ## Getting Started
 
-Inside the ``packer`` directory, a JSON file describes each box that can be built. You can use ``packer build`` to build the boxes. 
-Currently, only VirtualBox is available. So, you can customize the JSON files 
+Inside the ``packer`` directory, a JSON file describes each box that can be built. You can use ``packer build`` to build the boxes. So, you can customize the JSON files 
 
 ```bash
 $ git clone git@github.com:rgaidot/machine-builders.git

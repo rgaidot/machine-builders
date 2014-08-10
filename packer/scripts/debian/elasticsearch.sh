@@ -2,10 +2,10 @@
 
 apt-get -y install openjdk-7-jre-headless
 
-wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.0.deb
-dpkg -i elasticsearch-1.0.0.deb
-rm elasticsearch-1.0.0.deb
+wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
 
-cd /usr/share/elasticsearch/ && bin/plugin -i elasticsearch/marvel/latest
+echo "deb http://packages.elasticsearch.org/elasticsearch/1.2/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch.list
+
+apt-get update && apt-get install elasticsearch
 
 update-rc.d elasticsearch defaults
